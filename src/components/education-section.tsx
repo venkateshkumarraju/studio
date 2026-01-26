@@ -19,7 +19,7 @@ export function EducationSection() {
                                 <GraduationCap className="h-8 w-8 text-primary"/>
                                 <div>
                                     <CardTitle>Master of Engineering – Remote Sensing and Geomatics</CardTitle>
-                                    <CardDescription>College of Engineering, Guindy, Chennai</CardDescription>
+                                    <CardDescription>Anna University , College of Engineering , chennai</CardDescription>
                                 </div>
                             </div>
                         </CardHeader>
