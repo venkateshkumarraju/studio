@@ -38,7 +38,11 @@ const projects = [
 
 export function ProjectsSection() {
     return (
-        <section id="projects" className="w-full py-20 md:py-32">
+        <section 
+            id="projects" 
+            className="w-full py-20 md:py-32"
+            style={{backgroundImage: "linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%)"}}
+        >
             <div className="container mx-auto max-w-7xl space-y-12 px-4 md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Projects</h2>
