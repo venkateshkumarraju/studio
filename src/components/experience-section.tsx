@@ -1,7 +1,6 @@
 'use client';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { SphereAnimation } from "./sphere-animation";
-import { AnimatedBackground } from "./animated-background";
 
 const experiences = [
     {
@@ -45,8 +44,9 @@ export function ExperienceSection() {
         <section 
             id="experience" 
             className="relative w-full py-20 md:py-32 bg-cover bg-center overflow-hidden"
+            style={{backgroundImage: "url(https://raw.githubusercontent.com/venkateshkumarraju/venkateshkumarraju/main/assets/bg2.svg)"}}
         >
-            <AnimatedBackground />
+            <div className="absolute inset-0 bg-black/70" />
             <div className="container relative z-10 mx-auto max-w-7xl space-y-12 px-4 md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">Work Experience</h2>
