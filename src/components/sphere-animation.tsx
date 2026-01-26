@@ -7,7 +7,6 @@ type SphereAnimationProps = {
   dotsAmount?: number;
   dotRadius?: number;
   sphereRadius?: number;
-  dotColor?: string;
   turnSpeed?: number;
 };
 
@@ -17,7 +16,6 @@ export function SphereAnimation({
   dotsAmount: propDotsAmount = 700,
   dotRadius: propDotRadius = 1,
   sphereRadius: propSphereRadius = 150,
-  dotColor = '#fff',
   turnSpeed: propTurnSpeed = 0.001,
 }: SphereAnimationProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -47,6 +45,7 @@ export function SphereAnimation({
       xProjected: number;
       yProjected: number;
       scaleProjected: number;
+      color: string;
     };
 
     const dots: Dot[] = [];
@@ -58,7 +57,8 @@ export function SphereAnimation({
       const x = SPHERE_RADIUS * Math.sin(phi) * Math.cos(theta);
       const y = SPHERE_RADIUS * Math.sin(phi) * Math.sin(theta);
       const z = SPHERE_RADIUS * Math.cos(phi);
-      dots.push({ x, y, z, xProjected: 0, yProjected: 0, scaleProjected: 0 });
+      const color = `hsl(${(i / DOTS_AMOUNT) * 360}, 100%, 50%)`;
+      dots.push({ x, y, z, xProjected: 0, yProjected: 0, scaleProjected: 0, color });
     }
 
     function project(dot: Dot) {
@@ -86,7 +86,7 @@ export function SphereAnimation({
             dot.yProjected + height / 2, 
             DOT_RADIUS * dot.scaleProjected, 0, Math.PI * 2
         );
-        ctx!.fillStyle = dotColor;
+        ctx!.fillStyle = dot.color;
         ctx!.fill();
     }
     
@@ -131,7 +131,7 @@ export function SphereAnimation({
         }
     };
 
-  }, [propWidth, propHeight, propDotsAmount, propDotRadius, propSphereRadius, dotColor, propTurnSpeed]);
+  }, [propWidth, propHeight, propDotsAmount, propDotRadius, propSphereRadius, propTurnSpeed]);
 
   return <canvas ref={canvasRef} />;
 }
