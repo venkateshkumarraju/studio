@@ -92,8 +92,8 @@ export function HeroSection() {
           <div className="relative hidden h-full min-h-[400px] items-center justify-center lg:flex">
              <Image
                 src={placeholderImages.profileSphere.src}
-                width={250}
-                height={250}
+                width={placeholderImages.profileSphere.width}
+                height={placeholderImages.profileSphere.height}
                 alt={placeholderImages.profileSphere.alt}
                 data-ai-hint={placeholderImages.profileSphere.hint}
                 className="absolute rounded-full"

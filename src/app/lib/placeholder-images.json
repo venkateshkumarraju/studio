@@ -1,8 +1,8 @@
 {
     "profileSphere": {
         "src": "/profile.png",
-        "width": 300,
-        "height": 300,
+        "width": 250,
+        "height": 250,
         "alt": "Venkatesh Kumar Raju profile picture",
         "hint": "profile picture"
     }
