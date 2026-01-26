@@ -8,7 +8,7 @@ const formSchema = z.object({
   message: z.string().min(10),
 });
 
-export async function submitConsultationRequest(
+export async function submitContactForm(
   prevState: { success: boolean; message: string },
   formData: FormData
 ) {
@@ -28,15 +28,15 @@ export async function submitConsultationRequest(
   try {
     // Here you would typically send an email, save to a database, etc.
     // We'll just log it and simulate a delay.
-    console.log("New consultation request:", validatedFields.data);
+    console.log("New contact form submission:", validatedFields.data);
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     return {
       success: true,
-      message: "Your request has been submitted successfully!",
+      message: "Your message has been sent successfully!",
     };
   } catch (error) {
-    console.error("Error submitting request:", error);
+    console.error("Error submitting form:", error);
     return {
       success: false,
       message: "Something went wrong. Please try again later.",

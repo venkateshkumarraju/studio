@@ -1,38 +1,44 @@
-const skills = [
-  "WEB DESIGN",
-  "APP DESIGN",
-  "DEVELOPMENT",
-  "WEB FLOW",
-  "BRANDING",
-];
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
-const MarqueeItem = ({ text }: { text: string }) => (
-  <div className="flex items-center gap-8 text-2xl font-semibold tracking-wider">
-    <span>{text}</span>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-    >
-      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-    </svg>
-  </div>
-);
+const skillsData = {
+    "Geospatial": ["Photogrammetry", "DTM", "DSM", "GCP", "Topography", "Ortho Map", "3D Mapping"],
+    "Image Processing": ["OpenCV", "Computer Vision", "Image Classification"],
+    "Data Management": ["Data Analysis", "Asset Management", "Spatial Data"],
+    "Software Proficiency": ["ArcGIS Pro", "QGIS", "AutoCAD Map 3D", "Drone2map", "webODM", "Dronelink"],
+    "Programming": ["Python", "MATLAB"],
+    "Machine Learning": ["PyTorch", "TensorFlow", "Keras"],
+    "App Development": ["Flask"],
+    "Languages": ["Tamil", "English", "French (A2)"]
+};
 
-export function MarqueeSection() {
-  const extendedSkills = [...skills, ...skills, ...skills, ...skills];
-
-  return (
-    <section className="w-full bg-[#1C1C1C] text-white py-10 -rotate-2 transform my-16">
-      <div className="marquee">
-        <div className="marquee-content space-x-8">
-          {extendedSkills.map((skill, index) => (
-            <MarqueeItem key={index} text={skill} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+export function SkillsSection() {
+    return (
+        <section id="skills" className="w-full bg-secondary py-20 md:py-32">
+            <div className="container mx-auto max-w-7xl space-y-12 px-4 md:px-6">
+                <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Skills</h2>
+                    <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                        A collection of technologies and tools I'm proficient with.
+                    </p>
+                </div>
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    {Object.entries(skillsData).map(([category, skills]) => (
+                        <Card key={category}>
+                            <CardHeader>
+                                <CardTitle>{category}</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="flex flex-wrap gap-2">
+                                    {skills.map((skill) => (
+                                        <Badge key={skill} variant="default">{skill}</Badge>
+                                    ))}
+                                </div>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
 }

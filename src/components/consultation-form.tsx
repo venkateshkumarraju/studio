@@ -18,7 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { submitConsultationRequest } from "@/app/actions";
+import { submitContactForm } from "@/app/actions";
 import { Loader2 } from "lucide-react";
 
 const formSchema = z.object({
@@ -33,9 +33,9 @@ const formSchema = z.object({
   }),
 });
 
-export function ConsultationForm() {
+export function ContactForm() {
   const { toast } = useToast();
-  const [state, formAction] = useFormState(submitConsultationRequest, {
+  const [state, formAction] = useFormState(submitContactForm, {
     success: false,
     message: "",
   });
@@ -69,7 +69,7 @@ export function ConsultationForm() {
 
   return (
     <Form {...form}>
-      <form action={formAction} className="space-y-8">
+      <form action={formAction} className="space-y-6 rounded-lg border bg-card p-6 md:p-8">
         <FormField
           control={form.control}
           name="name"
@@ -123,14 +123,14 @@ function SubmitButton() {
   const { pending } = useFormStatus();
 
   return (
-    <Button type="submit" disabled={pending} className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+    <Button type="submit" disabled={pending} className="w-full">
       {pending ? (
         <>
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          Submitting...
+          Sending...
         </>
       ) : (
-        "Submit Request"
+        "Send Message"
       )}
     </Button>
   );

@@ -1,7 +1,12 @@
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
-import { MarqueeSection } from "@/components/marquee-section";
-import { ContactFooter } from "@/components/contact-footer";
+import { AboutSection } from "@/components/about-section";
+import { ExperienceSection } from "@/components/experience-section";
+import { SkillsSection } from "@/components/marquee-section";
+import { ProjectsSection } from "@/components/projects-section";
+import { EducationSection } from "@/components/education-section";
+import { CertificationsSection } from "@/components/certifications-section";
+import { ContactSection } from "@/components/contact-footer";
 
 export default function Home() {
   return (
@@ -9,9 +14,14 @@ export default function Home() {
       <Header />
       <main className="flex flex-1 flex-col">
         <HeroSection />
-        <MarqueeSection />
+        <AboutSection />
+        <ExperienceSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <EducationSection />
+        <CertificationsSection />
       </main>
-      <ContactFooter />
+      <ContactSection />
     </div>
   );
 }
