@@ -15,7 +15,7 @@ export function EducationSection() {
                                 <GraduationCap className="h-8 w-8 text-primary"/>
                                 <div>
                                     <CardTitle>Master of Engineering – Remote Sensing and Geomatics</CardTitle>
-                                    <CardDescription>College of Engineering, Guindy, Chennai | GPA: 7.2</CardDescription>
+                                    <CardDescription>College of Engineering, Guindy, Chennai</CardDescription>
                                 </div>
                             </div>
                         </CardHeader>
@@ -26,7 +26,7 @@ export function EducationSection() {
                                 <GraduationCap className="h-8 w-8 text-primary"/>
                                 <div>
                                     <CardTitle>Bachelor of Engineering – Civil Engineering</CardTitle>
-                                    <CardDescription>S.A Engineering College, Chennai | GPA: 6.5</CardDescription>
+                                    <CardDescription>S.A Engineering College, Chennai</CardDescription>
                                 </div>
                             </div>
                         </CardHeader>
