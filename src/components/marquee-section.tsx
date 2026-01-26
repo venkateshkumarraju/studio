@@ -14,7 +14,7 @@ const skillsData = {
 
 export function SkillsSection() {
     return (
-        <section id="skills" className="w-full bg-secondary py-20 md:py-32">
+        <section id="skills" className="w-full py-20 md:py-32" style={{backgroundImage: "linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%)"}}>
             <div className="container mx-auto max-w-7xl space-y-12 px-4 md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Skills</h2>
