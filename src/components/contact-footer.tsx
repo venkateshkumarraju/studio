@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { ContactForm } from "./consultation-form";
 
 export function ContactSection() {
@@ -16,10 +16,6 @@ export function ContactSection() {
                 <a href="mailto:venkateshkumar.raju@gmail.com" className="flex items-center gap-4 group">
                     <Mail className="h-5 w-5 text-primary" />
                     <span className="group-hover:underline">venkateshkumar.raju@gmail.com</span>
-                </a>
-                 <a href="tel:+917305451101" className="flex items-center gap-4 group">
-                    <Phone className="h-5 w-5 text-primary" />
-                    <span className="group-hover:underline">+91 7305451101</span>
                 </a>
                  <div className="flex items-center gap-4">
                     <MapPin className="h-5 w-5 text-primary" />
