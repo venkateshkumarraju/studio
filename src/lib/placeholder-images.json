@@ -1,3 +1,22 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "project-1",
+      "description": "An interactive web map for urban planning.",
+      "imageUrl": "https://images.unsplash.com/photo-1568317711805-97917847953d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYXAlMjBjaXR5fGVufDB8fHx8MTc2OTQxMzY3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "map city"
+    },
+    {
+      "id": "project-2",
+      "description": "Environmental impact analysis dashboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1718761262384-b6b54e8f97a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxuYXR1cmUlMjBjaGFydHxlbnwwfHx8fDE3Njk0NDAyMjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nature chart"
+    },
+    {
+      "id": "project-3",
+      "description": "A mobile app for field data collection.",
+      "imageUrl": "https://images.unsplash.com/photo-1523659221984-0a76810097a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwaG9uZSUyMGZvcmVzdHxlbnwwfHx8fDE3Njk0NDAyMjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "phone forest"
+    }
+  ]
 }
