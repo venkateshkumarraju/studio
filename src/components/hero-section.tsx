@@ -16,7 +16,7 @@ export function HeroSection() {
               Venkatesh Kumar Raju
             </h1>
             <p className="text-xl font-medium text-primary">
-              GIS Engineer | Remote Pilot | Machine Learning Enthusiast
+              GIS Engineer | Remote Pilot | Machine Learning Enthusiast | Computer Vision
             </p>
             <p className="max-w-xl text-foreground/80">
               I am a dedicated GIS Engineer, DGCA Certified Remote Pilot, and OpenCV Master with strong experience in deep learning using PyTorch, Keras, and TensorFlow. My expertise lies in geospatial analysis, 3D mapping, drone operations, and computer vision.
