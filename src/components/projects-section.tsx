@@ -1,7 +1,7 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
     {
@@ -43,7 +43,7 @@ export function ProjectsSection() {
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Projects</h2>
                     <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        Here are some of the projects I've worked on. Click on a project to view it on GitHub.
+                        Here are some of the projects I've worked on. Click on a project to view it.
                     </p>
                 </div>
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -53,7 +53,11 @@ export function ProjectsSection() {
                                 <CardHeader>
                                     <div className="flex items-center justify-between">
                                         <CardTitle>{project.title}</CardTitle>
-                                        <Github className="h-5 w-5 text-muted-foreground" />
+                                        {project.link.startsWith("https://github.com") ? (
+                                            <Github className="h-5 w-5 text-muted-foreground" />
+                                        ) : (
+                                            <ExternalLink className="h-5 w-5 text-muted-foreground" />
+                                        )}
                                     </div>
                                     <CardDescription>{project.description}</CardDescription>
                                 </CardHeader>
