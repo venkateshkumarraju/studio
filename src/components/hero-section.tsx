@@ -1,7 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SphereAnimation } from "@/components/sphere-animation";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, ArrowRight } from "lucide-react";
+import placeholderImages from "@/app/lib/placeholder-images.json";
 
 export function HeroSection() {
   return (
@@ -88,6 +90,14 @@ export function HeroSection() {
           </div>
 
           <div className="relative hidden h-full min-h-[400px] items-center justify-center lg:flex">
+             <Image
+                src={placeholderImages.profileSphere.src}
+                width={250}
+                height={250}
+                alt={placeholderImages.profileSphere.alt}
+                data-ai-hint={placeholderImages.profileSphere.hint}
+                className="absolute rounded-full"
+            />
             <SphereAnimation />
           </div>
         </div>
