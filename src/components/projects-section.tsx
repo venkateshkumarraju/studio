@@ -1,31 +1,38 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import { Github } from "lucide-react";
 
 const projects = [
     {
         title: "SeaMount Geospatial Labs",
         description: "A deep learning platform for coral reef monitoring.",
         tags: ["Deep Learning", "Coral Reefs", "Monitoring"],
+        link: "https://github.com/VenkateshKumarRaju/SeaMount-Geospatial-Labs"
     },
     {
         title: "Image Stitching",
         description: "Stitch drone images into panoramic orthomosaics.",
         tags: ["Drone Imagery", "Orthomosaic", "Image Processing"],
+        link: "https://github.com/VenkateshKumarRaju/Image-Stitching"
     },
     {
         title: "JPG to GeoTIFF Converter",
         description: "Converts JPG images with GPS data into georeferenced GeoTIFF files.",
         tags: ["GeoTIFF", "JPG", "GPS", "Converter"],
+        link: "https://github.com/VenkateshKumarRaju/JPG-to-GeoTIFF-Converter"
     },
     {
         title: "Virtual Makeup",
         description: "Facial landmark detection using OpenCV and Dlib.",
         tags: ["OpenCV", "Dlib", "Computer Vision"],
+        link: "https://github.com/VenkateshKumarRaju/Virtual-Makeup"
     },
     {
         title: "Object Detection (YOLOv5)",
         description: "Includes ANPR (Automatic Number Plate Recognition) functionality.",
         tags: ["YOLOv5", "Object Detection", "ANPR"],
+        link: "https://github.com/VenkateshKumarRaju/Object-Detection-YOLOv5"
     },
 ];
 
@@ -36,24 +43,29 @@ export function ProjectsSection() {
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Projects</h2>
                     <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        Here are some of the projects I've worked on.
+                        Here are some of the projects I've worked on. Click on a project to view it on GitHub.
                     </p>
                 </div>
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    {projects.map((project, index) => (
-                        <Card key={index} className="flex flex-col">
-                            <CardHeader>
-                                <CardTitle>{project.title}</CardTitle>
-                                <CardDescription>{project.description}</CardDescription>
-                            </CardHeader>
-                            <CardContent className="flex-grow mt-auto">
-                                <div className="flex flex-wrap gap-2">
-                                    {project.tags.map((tag) => (
-                                        <Badge key={tag} variant="secondary">{tag}</Badge>
-                                    ))}
-                                </div>
-                            </CardContent>
-                        </Card>
+                    {projects.map((project) => (
+                        <Link key={project.title} href={project.link} target="_blank" rel="noopener noreferrer" className="flex">
+                            <Card className="flex flex-col w-full transition-colors hover:border-primary">
+                                <CardHeader>
+                                    <div className="flex items-center justify-between">
+                                        <CardTitle>{project.title}</CardTitle>
+                                        <Github className="h-5 w-5 text-muted-foreground" />
+                                    </div>
+                                    <CardDescription>{project.description}</CardDescription>
+                                </CardHeader>
+                                <CardContent className="flex-grow mt-auto">
+                                    <div className="flex flex-wrap gap-2">
+                                        {project.tags.map((tag) => (
+                                            <Badge key={tag} variant="secondary">{tag}</Badge>
+                                        ))}
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </Link>
                     ))}
                 </div>
             </div>
