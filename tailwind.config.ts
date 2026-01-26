@@ -61,9 +61,6 @@ export default {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
-        'gradient-1': 'hsl(var(--gradient-color-1))',
-        'gradient-2': 'hsl(var(--gradient-color-2))',
-        'gradient-3': 'hsl(var(--gradient-color-3))',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -91,17 +88,11 @@ export default {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(calc(-100% - 2rem))' },
         },
-        'animated-gradient': {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
-        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'marquee': 'scroll 40s linear infinite',
-        'animated-gradient': 'animated-gradient 10s ease infinite',
       },
     },
   },
