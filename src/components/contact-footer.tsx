@@ -13,9 +13,9 @@ export function ContactSection() {
               Have a project in mind or just want to say hello? Feel free to reach out. I'm open to remote opportunities and relocation.
             </p>
             <div className="space-y-4">
-                <a href="mailto:venkateshkumar.raju@gmail.com" className="flex items-center gap-4 group">
+                <a href="mailto:raju.venkateshkumar@gmail.com" className="flex items-center gap-4 group">
                     <Mail className="h-5 w-5 text-primary" />
-                    <span className="group-hover:underline">venkateshkumar.raju@gmail.com</span>
+                    <span className="group-hover:underline">raju.venkateshkumar@gmail.com</span>
                 </a>
                  <div className="flex items-center gap-4">
                     <MapPin className="h-5 w-5 text-primary" />
