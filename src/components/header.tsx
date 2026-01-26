@@ -1,34 +1,50 @@
 import Link from "next/link";
-import { MapPin } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
-          <MapPin className="h-6 w-6 text-primary" />
-          <span className="hidden font-bold sm:inline-block font-headline">
-            GeoEngine Pro
-          </span>
+    <header className="absolute top-0 z-50 w-full py-8">
+      <div className="container mx-auto flex max-w-7xl items-center justify-between px-4 md:px-6">
+        <Link
+          href="/"
+          className="text-xl font-bold underline decoration-2 underline-offset-4"
+        >
+          it's me
         </Link>
-        <nav className="flex items-center gap-4 text-sm lg:gap-6">
-          <Link
-            href="#skills"
-            className="text-foreground/60 transition-colors hover:text-foreground/80"
-          >
-            Skills
-          </Link>
+        <nav className="hidden items-center gap-8 text-sm md:flex">
           <Link
             href="#projects"
-            className="text-foreground/60 transition-colors hover:text-foreground/80"
+            className="group transition-colors hover:text-foreground/80"
           >
-            Projects
+            <div className="flex items-center gap-1">
+              <span className="font-bold">My Projects</span>
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </div>
+            <p className="text-xs text-foreground/60">
+              See all of nice project i have done.
+            </p>
+          </Link>
+          <Link
+            href="#about"
+            className="group transition-colors hover:text-foreground/80"
+          >
+            <div className="flex items-center gap-1">
+              <span className="font-bold">About Me</span>
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </div>
+            <p className="text-xs text-foreground/60">
+              Learn about my self what i do
+            </p>
           </Link>
           <Link
             href="#contact"
-            className="text-foreground/60 transition-colors hover:text-foreground/80"
+            className="group transition-colors hover:text-foreground/80"
           >
-            Contact
+            <div className="flex items-center gap-1">
+              <span className="font-bold">Contact me</span>
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </div>
+            <p className="text-xs text-foreground/60">jhone_info@gmail.com</p>
           </Link>
         </nav>
       </div>

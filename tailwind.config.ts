@@ -17,9 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['PT Sans', 'sans-serif'],
-        headline: ['Poppins', 'sans-serif'],
-        code: ['monospace'],
+        body: ['var(--font-body)', 'sans-serif'],
+        headline: ['var(--font-body)', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -85,10 +84,15 @@ export default {
             height: '0',
           },
         },
+         scroll: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(calc(-100% - 2rem))' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'marquee': 'scroll 40s linear infinite',
       },
     },
   },

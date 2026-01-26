@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
 import "./globals.css";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
 
 export const metadata: Metadata = {
-  title: "GeoEngine Pro | GIS Engineer Portfolio",
-  description: "Portfolio and resume for a professional GIS engineer.",
+  title: "Madhu | Product Designer",
+  description: "Portfolio of Madhu, a product designer and UX leader.",
 };
 
 export default function RootLayout({
@@ -15,21 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body
         className={cn(
-          "min-h-screen bg-background font-body text-foreground antialiased"
+          "min-h-screen bg-background font-body text-foreground antialiased",
+          inter.variable
         )}
       >
         {children}

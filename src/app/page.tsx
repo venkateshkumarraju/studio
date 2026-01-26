@@ -1,7 +1,6 @@
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
-import { SkillsSection } from "@/components/skills-section";
-import { ProjectsSection } from "@/components/projects-section";
+import { MarqueeSection } from "@/components/marquee-section";
 import { ContactFooter } from "@/components/contact-footer";
 
 export default function Home() {
@@ -10,8 +9,7 @@ export default function Home() {
       <Header />
       <main className="flex flex-1 flex-col">
         <HeroSection />
-        <SkillsSection />
-        <ProjectsSection />
+        <MarqueeSection />
       </main>
       <ContactFooter />
     </div>
