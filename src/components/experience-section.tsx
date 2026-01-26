@@ -1,6 +1,7 @@
 'use client';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { SphereAnimation } from "./sphere-animation";
+import { Fireflies } from "./fireflies";
 
 const experiences = [
     {
@@ -41,37 +42,43 @@ const experiences = [
 
 export function ExperienceSection() {
     return (
-        <section id="experience" className="w-full py-20 md:py-32">
-            <div className="container mx-auto max-w-7xl space-y-12 px-4 md:px-6">
+        <section 
+            id="experience" 
+            className="relative w-full py-20 md:py-32 bg-cover bg-center overflow-hidden" 
+            style={{backgroundImage: "url(https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg)"}}
+        >
+            <div className="absolute inset-0 bg-black/70 z-0" />
+            <Fireflies />
+            <div className="container relative z-10 mx-auto max-w-7xl space-y-12 px-4 md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Work Experience</h2>
-                    <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">Work Experience</h2>
+                    <p className="max-w-[900px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                         A summary of my professional journey and key accomplishments.
                     </p>
                 </div>
                 <div className="relative">
-                    <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-border" />
+                    <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-border/50" />
                     <div className="grid gap-12">
                         {experiences.map((exp, index) => (
                             <div key={index} className="grid items-start gap-4 md:grid-cols-2">
                                 <div className={`flex items-center justify-start gap-4 ${index % 2 === 0 ? 'md:order-last md:justify-end' : ''}`}>
-                                    <div className="hidden h-px w-full bg-border md:block" />
-                                    <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-background">
+                                    <div className="hidden h-px w-full bg-border/50 md:block" />
+                                    <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-transparent">
                                         <SphereAnimation width={56} height={56} dotsAmount={200} dotRadius={0.6} sphereRadius={25} turnSpeed={0.01} />
                                     </div>
                                 </div>
-                                <Card className={index % 2 === 0 ? '' : 'md:ml-auto'}>
+                                <Card className={`bg-black/40 backdrop-blur-sm border-gray-500/50 text-gray-200 ${index % 2 === 0 ? '' : 'md:ml-auto'}`}>
                                     <CardHeader>
                                        <div className="flex items-center justify-between">
-                                            <CardTitle>{exp.title}</CardTitle>
-                                            <time className="text-sm text-muted-foreground">{exp.date}</time>
+                                            <CardTitle className="text-white">{exp.title}</CardTitle>
+                                            <time className="text-sm text-gray-400">{exp.date}</time>
                                        </div>
-                                        <CardDescription>{exp.company} {exp.location && `(${exp.location})`}</CardDescription>
+                                        <CardDescription className="text-gray-300">{exp.company} {exp.location && `(${exp.location})`}</CardDescription>
                                     </CardHeader>
                                     <CardContent>
-                                        <p className="text-muted-foreground">{exp.description}</p>
+                                        <p className="text-gray-300">{exp.description}</p>
                                         {exp.tasks && (
-                                            <ul className="mt-2 list-disc list-inside space-y-1 text-muted-foreground">
+                                            <ul className="mt-2 list-disc list-inside space-y-1 text-gray-300">
                                                 {exp.tasks.map((task, i) => (
                                                     <li key={i}>{task}</li>
                                                 ))}
