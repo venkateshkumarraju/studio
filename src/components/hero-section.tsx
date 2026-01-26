@@ -4,15 +4,13 @@ import { SphereAnimation } from "@/components/sphere-animation";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import placeholderImages from "@/app/lib/placeholder-images.json";
-import { LowPolyBackground } from "./low-poly-background";
 
 export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative w-full overflow-hidden py-20 md:py-32"
+      className="relative w-full overflow-hidden bg-black py-20 md:py-32"
     >
-      <LowPolyBackground />
       <div className="container relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="space-y-6">
