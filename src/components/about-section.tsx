@@ -2,7 +2,11 @@ import Image from "next/image";
 
 export function AboutSection() {
     return (
-        <section id="about" className="w-full bg-secondary py-20 md:py-32">
+        <section 
+            id="about" 
+            className="w-full py-20 md:py-32"
+            style={{backgroundImage: 'linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)'}}
+        >
             <div className="container mx-auto grid max-w-7xl items-center gap-10 px-4 md:grid-cols-2 md:px-6">
                 <div className="relative h-[400px] w-full md:h-[500px]">
                      <Image
