@@ -1,6 +1,6 @@
 {
     "profileSphere": {
-        "src": "https://picsum.photos/seed/profile-sphere/300/300",
+        "src": "/profile.png",
         "width": 300,
         "height": 300,
         "alt": "Venkatesh Kumar Raju profile picture",
