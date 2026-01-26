@@ -12,7 +12,7 @@ export function Header() {
           href="/"
           className="mr-6 flex items-center space-x-2"
         >
-          <span className="text-xl font-bold">VKR</span>
+          <span className="text-xl font-bold">Venkatesh Kumar Raju</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm md:flex">
           <Link
