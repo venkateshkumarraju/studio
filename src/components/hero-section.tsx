@@ -1,15 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowRight, Globe } from "lucide-react";
 
 export function HeroSection() {
   return (
     <section
       id="hero"
-      className="w-full py-20 md:py-32"
+      className="relative w-full overflow-hidden py-20 md:py-32"
     >
-      <div className="container mx-auto max-w-7xl px-4 md:px-6">
+      <div className="absolute inset-0 z-0">
+        <Globe className="absolute -left-1/4 -top-1/4 h-[150%] w-[150%] animate-spin-slow text-primary/5" />
+      </div>
+      <div className="container relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="space-y-6">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">

@@ -87,12 +87,17 @@ export default {
          scroll: {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(calc(-100% - 2rem))' },
+        },
+        'spin-slow': {
+          from: { transform: 'rotate(0deg)' },
+          to: { transform: 'rotate(360deg)' },
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'marquee': 'scroll 40s linear infinite',
+        'spin-slow': 'spin-slow 60s linear infinite',
       },
     },
   },
