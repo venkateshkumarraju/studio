@@ -1,8 +1,8 @@
 {
     "profileSphere": {
-        "src": "/profile.png",
-        "width": 250,
-        "height": 250,
+        "src": "https://raw.githubusercontent.com/venkateshkumarraju/venkateshkumarraju/main/assets/pic%20profile.png",
+        "width": 300,
+        "height": 300,
         "alt": "Venkatesh Kumar Raju profile picture",
         "hint": "profile picture"
     }

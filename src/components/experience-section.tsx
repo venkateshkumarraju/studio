@@ -1,6 +1,7 @@
 'use client';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { SphereAnimation } from "./sphere-animation";
+import { AnimatedBackground } from "./animated-background";
 
 const experiences = [
     {
@@ -43,9 +44,9 @@ export function ExperienceSection() {
     return (
         <section 
             id="experience" 
-            className="relative w-full py-20 md:py-32 bg-cover bg-center overflow-hidden" 
-            style={{backgroundImage: "url(https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg)"}}
+            className="relative w-full py-20 md:py-32 bg-cover bg-center overflow-hidden"
         >
+            <AnimatedBackground />
             <div className="container relative z-10 mx-auto max-w-7xl space-y-12 px-4 md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">Work Experience</h2>
