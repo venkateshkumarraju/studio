@@ -16,23 +16,23 @@ export function HeroSection() {
       <div className="container relative z-10 mx-auto max-w-7xl px-4 md:px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="space-y-6">
-            <h1 className="text-4xl font-bold tracking-tighter text-white sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="text-4xl font-bold tracking-tighter text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
               Venkatesh Kumar Raju
             </h1>
-            <p className="text-xl font-medium text-white/90">
+            <p className="text-xl font-medium text-foreground/90">
               GIS Engineer | Remote Pilot | Machine Learning Enthusiast | Computer Vision
             </p>
-            <p className="max-w-xl text-gray-200">
+            <p className="max-w-xl text-muted-foreground">
               I am a dedicated GIS Engineer, DGCA Certified Remote Pilot, and OpenCV Master with strong experience in deep learning using PyTorch, Keras, and TensorFlow. My expertise lies in geospatial analysis, 3D mapping, drone operations, and computer vision.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Button asChild size="lg" variant="secondary">
+              <Button asChild size="lg">
                 <a href="/resume.pdf" download>
                   View Resume <ArrowDown className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-white/50 text-white hover:bg-white/10 hover:text-white">
+              <Button asChild variant="outline" size="lg">
                 <Link href="#contact">
                   Contact Me <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
