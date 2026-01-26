@@ -28,6 +28,9 @@ html {
     --input: 214.3 31.8% 91.4%;
     --ring: 217 91% 60%;
     --radius: 0.5rem;
+    --gradient-color-1: 340 90% 70%;
+    --gradient-color-2: 270 90% 70%;
+    --gradient-color-3: 217 91% 60%;
   }
 
   .dark {
