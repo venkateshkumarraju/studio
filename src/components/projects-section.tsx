@@ -5,34 +5,34 @@ import { Github } from "lucide-react";
 
 const projects = [
     {
-        title: "SeaMount Geospatial Labs",
+        title: "Coral intel",
         description: "A deep learning platform for coral reef monitoring.",
         tags: ["Deep Learning", "Coral Reefs", "Monitoring"],
-        link: "https://github.com/VenkateshKumarRaju/SeaMount-Geospatial-Labs"
+        link: "https://seamountgeo.com/coral_intel"
     },
     {
         title: "Image Stitching",
         description: "Stitch drone images into panoramic orthomosaics.",
         tags: ["Drone Imagery", "Orthomosaic", "Image Processing"],
-        link: "https://github.com/VenkateshKumarRaju/Image-Stitching"
+        link: "https://github.com/venkateshkumarraju/image-stitching-"
     },
     {
         title: "JPG to GeoTIFF Converter",
         description: "Converts JPG images with GPS data into georeferenced GeoTIFF files.",
         tags: ["GeoTIFF", "JPG", "GPS", "Converter"],
-        link: "https://github.com/VenkateshKumarRaju/JPG-to-GeoTIFF-Converter"
+        link: "https://github.com/venkateshkumarraju/converting-jpg-to-geotif"
     },
     {
         title: "Virtual Makeup",
         description: "Facial landmark detection using OpenCV and Dlib.",
         tags: ["OpenCV", "Dlib", "Computer Vision"],
-        link: "https://github.com/VenkateshKumarRaju/Virtual-Makeup"
+        link: "https://github.com/venkateshkumarraju/virtual-makeup"
     },
     {
         title: "Object Detection (YOLOv5)",
         description: "Includes ANPR (Automatic Number Plate Recognition) functionality.",
         tags: ["YOLOv5", "Object Detection", "ANPR"],
-        link: "https://github.com/VenkateshKumarRaju/Object-Detection-YOLOv5"
+        link: "https://github.com/venkateshkumarraju/object-dectection-"
     },
 ];
 
