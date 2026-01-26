@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { SphereAnimation } from "@/components/sphere-animation";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, ArrowRight } from "lucide-react";
 
@@ -88,16 +88,7 @@ export function HeroSection() {
           </div>
 
           <div className="relative hidden h-full min-h-[400px] items-center justify-center lg:flex">
-            <Image
-              src="https://picsum.photos/seed/venkatesh-kumar-raju/500/500"
-              alt="Portrait of Venkatesh Kumar Raju"
-              width={400}
-              height={400}
-              className="relative z-10 rounded-full object-cover shadow-2xl"
-              data-ai-hint="portrait man professional"
-            />
-             <div className="absolute top-0 -right-4 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
-             <div className="absolute bottom-0 -left-4 h-72 w-72 rounded-full bg-secondary/20 blur-3xl" />
+            <SphereAnimation />
           </div>
         </div>
       </div>
