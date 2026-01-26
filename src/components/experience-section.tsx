@@ -44,39 +44,38 @@ export function ExperienceSection() {
         <section 
             id="experience" 
             className="relative w-full py-20 md:py-32 bg-cover bg-center overflow-hidden"
-            style={{backgroundImage: "url(https://raw.githubusercontent.com/venkateshkumarraju/venkateshkumarraju/main/assets/bg2.svg)"}}
+            style={{backgroundImage: "linear-gradient(to top, #a8edea 0%, #fed6e3 100%)"}}
         >
-            <div className="absolute inset-0 bg-black/70" />
             <div className="container relative z-10 mx-auto max-w-7xl space-y-12 px-4 md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">Work Experience</h2>
-                    <p className="max-w-[900px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-foreground">Work Experience</h2>
+                    <p className="max-w-[900px] text-foreground/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                         A summary of my professional journey and key accomplishments.
                     </p>
                 </div>
                 <div className="relative">
-                    <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-border/50" />
+                    <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-border" />
                     <div className="grid gap-12">
                         {experiences.map((exp, index) => (
                             <div key={index} className="grid items-start gap-4 md:grid-cols-2">
                                 <div className={`flex items-center justify-start gap-4 ${index % 2 === 0 ? 'md:order-last md:justify-end' : ''}`}>
-                                    <div className="hidden h-px w-full bg-border/50 md:block" />
+                                    <div className="hidden h-px w-full bg-border md:block" />
                                     <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-transparent">
                                         <SphereAnimation width={56} height={56} dotsAmount={200} dotRadius={0.6} sphereRadius={25} turnSpeed={0.01} />
                                     </div>
                                 </div>
-                                <Card className={`bg-black/40 backdrop-blur-sm border-gray-500/50 text-gray-200 ${index % 2 === 0 ? '' : 'md:ml-auto'}`}>
+                                <Card className={`bg-background/30 backdrop-blur-sm border-border/30 ${index % 2 === 0 ? '' : 'md:ml-auto'}`}>
                                     <CardHeader>
                                        <div className="flex items-center justify-between">
-                                            <CardTitle className="text-white">{exp.title}</CardTitle>
-                                            <time className="text-sm text-gray-400">{exp.date}</time>
+                                            <CardTitle>{exp.title}</CardTitle>
+                                            <time className="text-sm text-muted-foreground">{exp.date}</time>
                                        </div>
-                                        <CardDescription className="text-gray-300">{exp.company} {exp.location && `(${exp.location})`}</CardDescription>
+                                        <CardDescription>{exp.company} {exp.location && `(${exp.location})`}</CardDescription>
                                     </CardHeader>
                                     <CardContent>
-                                        <p className="text-gray-300">{exp.description}</p>
+                                        <p>{exp.description}</p>
                                         {exp.tasks && (
-                                            <ul className="mt-2 list-disc list-inside space-y-1 text-gray-300">
+                                            <ul className="mt-2 list-disc list-inside space-y-1">
                                                 {exp.tasks.map((task, i) => (
                                                     <li key={i}>{task}</li>
                                                 ))}
