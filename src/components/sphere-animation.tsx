@@ -1,7 +1,25 @@
 'use client';
 import React, { useRef, useEffect } from 'react';
 
-export function SphereAnimation() {
+type SphereAnimationProps = {
+  width?: number;
+  height?: number;
+  dotsAmount?: number;
+  dotRadius?: number;
+  sphereRadius?: number;
+  dotColor?: string;
+  turnSpeed?: number;
+};
+
+export function SphereAnimation({
+  width: propWidth = 400,
+  height: propHeight = 400,
+  dotsAmount: propDotsAmount = 700,
+  dotRadius: propDotRadius = 1,
+  sphereRadius: propSphereRadius = 150,
+  dotColor = '#fff',
+  turnSpeed: propTurnSpeed = 0.001,
+}: SphereAnimationProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -10,16 +28,16 @@ export function SphereAnimation() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    let width = (canvas.width = 400);
-    let height = (canvas.height = 400);
+    let width = (canvas.width = propWidth);
+    let height = (canvas.height = propHeight);
 
-    const DOTS_AMOUNT = 700;
-    const DOT_RADIUS = 1;
-    const SPHERE_RADIUS = 150;
+    const DOTS_AMOUNT = propDotsAmount;
+    const DOT_RADIUS = propDotRadius;
+    const SPHERE_RADIUS = propSphereRadius;
     const PERSPECTIVE = width * 0.8;
     
     let turnAngle = 0;
-    const turnSpeed = 0.001;
+    const turnSpeed = propTurnSpeed;
     let mouseX = 0, mouseY = 0;
 
     type Dot = {
@@ -68,13 +86,14 @@ export function SphereAnimation() {
             dot.yProjected + height / 2, 
             DOT_RADIUS * dot.scaleProjected, 0, Math.PI * 2
         );
-        ctx!.fillStyle = '#fff';
+        ctx!.fillStyle = dotColor;
         ctx!.fill();
     }
     
     let animationFrameId: number;
     function loop() {
-      ctx!.clearRect(0, 0, width, height);
+      if (!ctx) return;
+      ctx.clearRect(0, 0, width, height);
 
       dots.forEach(project);
       dots.sort((dot1, dot2) => {
@@ -88,6 +107,7 @@ export function SphereAnimation() {
     }
     
     const onMouseMove = (e: MouseEvent) => {
+        if (!canvas) return;
         const rect = canvas.getBoundingClientRect();
         mouseX = (e.clientX - rect.left) - width/2;
         mouseY = (e.clientY - rect.top) - height/2;
@@ -111,7 +131,7 @@ export function SphereAnimation() {
         }
     };
 
-  }, []);
+  }, [propWidth, propHeight, propDotsAmount, propDotRadius, propSphereRadius, dotColor, propTurnSpeed]);
 
   return <canvas ref={canvasRef} />;
 }

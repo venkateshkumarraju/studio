@@ -1,4 +1,6 @@
+'use client';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { SphereAnimation } from "./sphere-animation";
 
 const experiences = [
     {
@@ -54,8 +56,8 @@ export function ExperienceSection() {
                             <div key={index} className="grid items-start gap-4 md:grid-cols-2">
                                 <div className={`flex items-center justify-start gap-4 ${index % 2 === 0 ? 'md:order-last md:justify-end' : ''}`}>
                                     <div className="hidden h-px w-full bg-border md:block" />
-                                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border bg-background">
-                                        <div className="h-2 w-2 rounded-full bg-primary" />
+                                    <div className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary">
+                                        <SphereAnimation width={24} height={24} dotsAmount={100} dotRadius={0.4} sphereRadius={10} turnSpeed={0.002} />
                                     </div>
                                 </div>
                                 <Card className={index % 2 === 0 ? '' : 'md:ml-auto'}>
