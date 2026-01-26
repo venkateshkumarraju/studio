@@ -56,8 +56,8 @@ export function ExperienceSection() {
                             <div key={index} className="grid items-start gap-4 md:grid-cols-2">
                                 <div className={`flex items-center justify-start gap-4 ${index % 2 === 0 ? 'md:order-last md:justify-end' : ''}`}>
                                     <div className="hidden h-px w-full bg-border md:block" />
-                                    <div className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary">
-                                        <SphereAnimation width={24} height={24} dotsAmount={100} dotRadius={0.4} sphereRadius={10} turnSpeed={0.002} />
+                                    <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-background">
+                                        <SphereAnimation width={56} height={56} dotsAmount={200} dotRadius={0.6} sphereRadius={25} turnSpeed={0.01} />
                                     </div>
                                 </div>
                                 <Card className={index % 2 === 0 ? '' : 'md:ml-auto'}>
