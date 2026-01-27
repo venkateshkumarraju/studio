@@ -61,8 +61,8 @@ export function SkillsSection() {
                 </div>
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
                     {skillsData.map((skillData) => (
-                        <div key={skillData.category} className="service-parent">
-                            <div className="service-card">
+                        <div key={skillData.category} className="skill-parent">
+                            <div className="skill-card">
                                 <div className="logo">
                                     <span className="circle circle1"></span>
                                     <span className="circle circle2"></span>

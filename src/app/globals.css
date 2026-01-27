@@ -330,16 +330,157 @@ html {
   transform: translate3d(0, 0, 120px);
 }
 
+/* Skill Card Animation */
+.skill-parent {
+  width: 290px;
+  height: 350px;
+  perspective: 1000px;
+}
+
+.skill-card {
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #faaca8 0%, #ddd6f3 100%);
+  transition: all 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  box-shadow: rgba(221, 214, 243, 0) 40px 50px 25px -40px, rgba(250, 172, 168, 0.2) 0px 25px 25px -5px;
+}
+
+.skill-card .glass {
+  transform-style: preserve-3d;
+  position: absolute;
+  inset: 8px;
+  border-radius: 55px;
+  border-top-right-radius: 100%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.349) 0%, rgba(255, 255, 255, 0.815) 100%);
+  transform: translate3d(0px, 0px, 25px);
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  transition: all 0.5s ease-in-out;
+}
+
+.skill-card .content {
+  padding: 100px 30px 0px 30px;
+  text-align: center;
+  transform: translate3d(0, 0, 26px);
+}
+
+.skill-card .content .title {
+  display: block;
+  color: #5D4157;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.skill-card .content .text {
+  display: block;
+  color: rgba(93, 65, 87, 0.75);
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.skill-card .logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-style: preserve-3d;
+}
+
+.skill-card .logo .circle {
+  display: block;
+  position: absolute;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  box-shadow: rgba(100, 100, 111, 0.2) -10px 10px 20px 0px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background: rgba(221, 214, 243, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.skill-card .logo .circle1 {
+  width: 170px;
+  transform: translate3d(0, 0, 20px);
+  top: 8px;
+  right: 8px;
+}
+
+.skill-card .logo .circle2 {
+  width: 140px;
+  transform: translate3d(0, 0, 40px);
+  top: 10px;
+  right: 10px;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  transition-delay: 0.4s;
+}
+
+.skill-card .logo .circle3 {
+  width: 110px;
+  transform: translate3d(0, 0, 60px);
+  top: 17px;
+  right: 17px;
+  transition-delay: 0.8s;
+}
+
+.skill-card .logo .circle4 {
+  width: 80px;
+  transform: translate3d(0, 0, 80px);
+  top: 23px;
+  right: 23px;
+  transition-delay: 1.2s;
+}
+
+.skill-card .logo .circle5 {
+  width: 50px;
+  transform: translate3d(0, 0, 100px);
+  top: 30px;
+  right: 30px;
+  display: grid;
+  place-content: center;
+  transition-delay: 1.6s;
+}
+
+.skill-card .logo .circle5 .service-icon {
+  width: 25px;
+  height: 25px;
+  color: white;
+}
+
+.skill-parent:hover .skill-card {
+  transform: rotate3d(1, 1, 0, 30deg);
+  box-shadow: rgba(250, 172, 168, 0.3) 30px 50px 25px -40px, rgba(221, 214, 243, 0.1) 0px 25px 30px 0px;
+}
+
+.skill-parent:hover .skill-card .logo .circle2 {
+  transform: translate3d(0, 0, 60px);
+}
+
+.skill-parent:hover .skill-card .logo .circle3 {
+  transform: translate3d(0, 0, 80px);
+}
+
+.skill-parent:hover .skill-card .logo .circle4 {
+  transform: translate3d(0, 0, 100px);
+}
+
+.skill-parent:hover .skill-card .logo .circle5 {
+  transform: translate3d(0, 0, 120px);
+}
+
+
 /* From Uiverse.io by gharsh11032000 */
 .learn-more {
   position: relative;
   width: 120px;
   height: 40px;
-  background-color: #000;
+  background-color: hsl(var(--primary));
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: hsl(var(--primary-foreground));
   border: none;
   border-radius: 8px;
   cursor: pointer;
