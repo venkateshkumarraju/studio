@@ -44,7 +44,7 @@ export function ServicesSection() {
         <section 
             id="services" 
             className="w-full py-20 md:py-32"
-            style={{backgroundImage: "linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)"}}
+            style={{backgroundImage: "linear-gradient(to top, #5ee7df 0%, #b490ca 100%)"}}
         >
             <div className="container mx-auto max-w-7xl space-y-12 px-4 md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">

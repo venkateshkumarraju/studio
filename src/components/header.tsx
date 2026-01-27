@@ -49,7 +49,7 @@ export function Header() {
         <div className="flex items-center gap-4">
             <Link href="#contact" className="hidden md:inline-flex">
                 <Button>
-                    Contact Me
+                    Hire me
                     <ArrowUpRight className="ml-2 h-4 w-4" />
                 </Button>
             </Link>
@@ -94,7 +94,7 @@ export function Header() {
                     </Link>
                     <Link href="#contact">
                         <Button className="w-full">
-                            Contact Me
+                            Hire me
                         </Button>
                     </Link>
                     </div>
