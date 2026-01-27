@@ -64,7 +64,7 @@ export function SkillsSection() {
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {skillsData.map((skillData) => (
                         <TiltCard key={skillData.category}>
-                            <Card className="flex flex-col w-full h-full transition-all hover:border-primary">
+                            <Card className="flex flex-col w-full h-full bg-background/30 backdrop-blur-sm border-border/30 transition-all hover:border-primary">
                                 <CardHeader>
                                     <div className="flex items-start gap-4">
                                         {React.cloneElement(skillData.icon, { className: "h-8 w-8 text-primary shrink-0" })}
