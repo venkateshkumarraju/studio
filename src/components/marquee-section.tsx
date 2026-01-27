@@ -13,6 +13,9 @@ const skillsData = {
 };
 
 export function SkillsSection() {
+    const skillCategories = Object.entries(skillsData);
+    const quantity = skillCategories.length;
+
     return (
         <section id="skills" className="w-full py-20 md:py-32" style={{backgroundImage: "linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%)"}}>
             <div className="container mx-auto max-w-7xl space-y-12 px-4 md:px-6">
@@ -22,21 +25,25 @@ export function SkillsSection() {
                         A collection of technologies and tools I'm proficient with.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                    {Object.entries(skillsData).map(([category, skills]) => (
-                        <Card key={category} className="transition-all hover:shadow-lg hover:-translate-y-2">
-                            <CardHeader>
-                                <CardTitle>{category}</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="flex flex-wrap gap-2">
-                                    {skills.map((skill) => (
-                                        <Badge key={skill} variant="default">{skill}</Badge>
-                                    ))}
-                                </div>
-                            </CardContent>
-                        </Card>
-                    ))}
+                <div className="skills-wrapper">
+                    <div className="skills-inner" style={{'--quantity': quantity} as React.CSSProperties}>
+                        {skillCategories.map(([category, skills], index) => (
+                            <div key={category} className="skills-card-item" style={{'--index': index} as React.CSSProperties}>
+                                <Card className="shad-card">
+                                    <CardHeader>
+                                        <CardTitle>{category}</CardTitle>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <div className="flex flex-wrap gap-2">
+                                            {skills.map((skill) => (
+                                                <Badge key={skill} variant="default">{skill}</Badge>
+                                            ))}
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
