@@ -10,7 +10,7 @@ export function AboutSection() {
             <div className="container mx-auto grid max-w-7xl items-center gap-10 px-4 md:grid-cols-2 md:px-6">
                 <div className="relative h-[400px] w-full md:h-[500px]">
                      <Image
-                        src="https://picsum.photos/seed/about-photo/600/500"
+                        src="https://raw.githubusercontent.com/venkateshkumarraju/venkateshkumarraju/main/assets/IMG_20250309_210635.png"
                         alt="Venkatesh Kumar Raju working"
                         layout="fill"
                         objectFit="cover"
