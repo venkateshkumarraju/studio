@@ -1,6 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import React from 'react';
 import { Globe, ScanSearch, Database, Laptop, Code, BrainCircuit, AppWindow, Languages as LanguagesIcon } from "lucide-react";
+import { TiltCard } from "./tilt-card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const skillsData = [
     {
@@ -59,30 +61,25 @@ export function SkillsSection() {
                         A collection of technologies and tools I'm proficient with.
                     </p>
                 </div>
-                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
+                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {skillsData.map((skillData) => (
-                        <div key={skillData.category} className="skill-parent">
-                            <div className="skill-card">
-                                <div className="logo">
-                                    <span className="circle circle1"></span>
-                                    <span className="circle circle2"></span>
-                                    <span className="circle circle3"></span>
-                                    <span className="circle circle4"></span>
-                                    <span className="circle circle5">
-                                        {React.cloneElement(skillData.icon, { className: 'service-icon' })}
-                                    </span>
-                                </div>
-                                <div className="glass"></div>
-                                <div className="content">
-                                    <span className="title">{skillData.category}</span>
-                                    <div className="text mt-4 flex flex-wrap justify-center gap-2">
+                        <TiltCard key={skillData.category}>
+                            <Card className="flex flex-col w-full h-full transition-all hover:border-primary">
+                                <CardHeader>
+                                    <div className="flex items-start gap-4">
+                                        {React.cloneElement(skillData.icon, { className: "h-8 w-8 text-primary shrink-0" })}
+                                        <CardTitle>{skillData.category}</CardTitle>
+                                    </div>
+                                </CardHeader>
+                                <CardContent className="flex-grow">
+                                    <div className="flex flex-wrap gap-2">
                                         {skillData.skills.map((skill) => (
                                             <Badge key={skill} variant="secondary">{skill}</Badge>
                                         ))}
                                     </div>
-                                </div>
-                            </div>
-                        </div>
+                                </CardContent>
+                            </Card>
+                        </TiltCard>
                     ))}
                 </div>
             </div>

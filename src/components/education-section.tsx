@@ -1,5 +1,6 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { GraduationCap } from "lucide-react";
+import { TiltCard } from "./tilt-card";
 
 export function EducationSection() {
     return (
@@ -13,28 +14,32 @@ export function EducationSection() {
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Education</h2>
                 </div>
                 <div className="grid gap-8 md:grid-cols-2">
-                    <Card className="transition-all hover:shadow-lg hover:-translate-y-2">
-                        <CardHeader>
-                            <div className="flex items-center gap-4">
-                                <GraduationCap className="h-8 w-8 text-primary"/>
-                                <div>
-                                    <CardTitle>Master of Engineering – Remote Sensing and Geomatics</CardTitle>
-                                    <CardDescription>Anna University , College of Engineering , Chennai</CardDescription>
+                    <TiltCard>
+                        <Card className="w-full h-full transition-all hover:border-primary">
+                            <CardHeader>
+                                <div className="flex items-center gap-4">
+                                    <GraduationCap className="h-8 w-8 text-primary"/>
+                                    <div>
+                                        <CardTitle>Master of Engineering – Remote Sensing and Geomatics</CardTitle>
+                                        <CardDescription>Anna University , College of Engineering , Chennai</CardDescription>
+                                    </div>
                                 </div>
-                            </div>
-                        </CardHeader>
-                    </Card>
-                    <Card className="transition-all hover:shadow-lg hover:-translate-y-2">
-                        <CardHeader>
-                           <div className="flex items-center gap-4">
-                                <GraduationCap className="h-8 w-8 text-primary"/>
-                                <div>
-                                    <CardTitle>Bachelor of Engineering – Civil Engineering</CardTitle>
-                                    <CardDescription>S.A Engineering College, Chennai</CardDescription>
+                            </CardHeader>
+                        </Card>
+                    </TiltCard>
+                    <TiltCard>
+                        <Card className="w-full h-full transition-all hover:border-primary">
+                            <CardHeader>
+                               <div className="flex items-center gap-4">
+                                    <GraduationCap className="h-8 w-8 text-primary"/>
+                                    <div>
+                                        <CardTitle>Bachelor of Engineering – Civil Engineering</CardTitle>
+                                        <CardDescription>S.A Engineering College, Chennai</CardDescription>
+                                    </div>
                                 </div>
-                            </div>
-                        </CardHeader>
-                    </Card>
+                            </CardHeader>
+                        </Card>
+                    </TiltCard>
                 </div>
             </div>
         </section>

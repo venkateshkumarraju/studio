@@ -1,5 +1,7 @@
 import { ScanSearch, Spline, Mountain, Map, Navigation, Scan, AppWindow } from "lucide-react";
 import React from 'react';
+import { TiltCard } from "./tilt-card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 
 const services = [
@@ -54,26 +56,21 @@ export function ServicesSection() {
                         Offering a range of specialized services in geospatial and AI domains.
                     </p>
                 </div>
-                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
+                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     {services.map((service) => (
-                        <div key={service.title} className="service-parent">
-                            <div className="service-card">
-                                <div className="logo">
-                                    <span className="circle circle1"></span>
-                                    <span className="circle circle2"></span>
-                                    <span className="circle circle3"></span>
-                                    <span className="circle circle4"></span>
-                                    <span className="circle circle5">
-                                        {React.cloneElement(service.icon, { className: 'service-icon' })}
-                                    </span>
-                                </div>
-                                <div className="glass"></div>
-                                <div className="content">
-                                    <span className="title">{service.title}</span>
-                                    <span className="text">{service.description}</span>
-                                </div>
-                            </div>
-                        </div>
+                        <TiltCard key={service.title}>
+                            <Card className="flex flex-col w-full h-full transition-all hover:border-primary">
+                                <CardHeader>
+                                    <div className="flex items-start gap-4">
+                                        {React.cloneElement(service.icon, { className: "h-8 w-8 text-primary shrink-0"})}
+                                        <CardTitle>{service.title}</CardTitle>
+                                    </div>
+                                </CardHeader>
+                                <CardContent className="flex-grow">
+                                    <p className="text-muted-foreground">{service.description}</p>
+                                </CardContent>
+                            </Card>
+                        </TiltCard>
                     ))}
                 </div>
             </div>

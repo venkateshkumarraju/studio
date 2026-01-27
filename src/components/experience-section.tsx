@@ -1,6 +1,7 @@
 'use client';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { SphereAnimation } from "./sphere-animation";
+import { TiltCard } from "./tilt-card";
 
 const experiences = [
     {
@@ -64,25 +65,27 @@ export function ExperienceSection() {
                                         <SphereAnimation width={56} height={56} dotsAmount={200} dotRadius={0.6} sphereRadius={25} turnSpeed={0.01} />
                                     </div>
                                 </div>
-                                <Card className={`bg-background/30 backdrop-blur-sm border-border/30 transition-all hover:shadow-lg hover:-translate-y-1 ${index % 2 === 0 ? '' : 'md:ml-auto'}`}>
-                                    <CardHeader>
-                                       <div className="flex items-center justify-between">
-                                            <CardTitle>{exp.title}</CardTitle>
-                                            <time className="text-sm text-muted-foreground">{exp.date}</time>
-                                       </div>
-                                        <CardDescription>{exp.company} {exp.location && `(${exp.location})`}</CardDescription>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <p>{exp.description}</p>
-                                        {exp.tasks && (
-                                            <ul className="mt-2 list-disc list-inside space-y-1">
-                                                {exp.tasks.map((task, i) => (
-                                                    <li key={i}>{task}</li>
-                                                ))}
-                                            </ul>
-                                        )}
-                                    </CardContent>
-                                </Card>
+                                <TiltCard className={index % 2 === 0 ? '' : 'md:ml-auto'}>
+                                    <Card className="flex flex-col w-full h-full bg-background/30 backdrop-blur-sm border-border/30 transition-all hover:border-primary">
+                                        <CardHeader>
+                                           <div className="flex items-center justify-between">
+                                                <CardTitle>{exp.title}</CardTitle>
+                                                <time className="text-sm text-muted-foreground">{exp.date}</time>
+                                           </div>
+                                            <CardDescription>{exp.company} {exp.location && `(${exp.location})`}</CardDescription>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <p>{exp.description}</p>
+                                            {exp.tasks && (
+                                                <ul className="mt-2 list-disc list-inside space-y-1">
+                                                    {exp.tasks.map((task, i) => (
+                                                        <li key={i}>{task}</li>
+                                                    ))}
+                                                </ul>
+                                            )}
+                                        </CardContent>
+                                    </Card>
+                                </TiltCard>
                             </div>
                         ))}
                     </div>
