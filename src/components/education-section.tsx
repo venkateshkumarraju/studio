@@ -13,7 +13,7 @@ export function EducationSection() {
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Education</h2>
                 </div>
                 <div className="grid gap-8 md:grid-cols-2">
-                    <Card>
+                    <Card className="transition-all hover:shadow-lg hover:-translate-y-2">
                         <CardHeader>
                             <div className="flex items-center gap-4">
                                 <GraduationCap className="h-8 w-8 text-primary"/>
@@ -24,7 +24,7 @@ export function EducationSection() {
                             </div>
                         </CardHeader>
                     </Card>
-                    <Card>
+                    <Card className="transition-all hover:shadow-lg hover:-translate-y-2">
                         <CardHeader>
                            <div className="flex items-center gap-4">
                                 <GraduationCap className="h-8 w-8 text-primary"/>

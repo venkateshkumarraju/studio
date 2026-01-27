@@ -24,7 +24,7 @@ export function SkillsSection() {
                 </div>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {Object.entries(skillsData).map(([category, skills]) => (
-                        <Card key={category}>
+                        <Card key={category} className="transition-all hover:shadow-lg hover:-translate-y-2">
                             <CardHeader>
                                 <CardTitle>{category}</CardTitle>
                             </CardHeader>

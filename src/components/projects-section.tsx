@@ -53,7 +53,7 @@ export function ProjectsSection() {
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project) => (
                         <Link key={project.title} href={project.link} target="_blank" rel="noopener noreferrer" className="flex">
-                            <Card className="flex flex-col w-full transition-colors hover:border-primary">
+                            <Card className="flex flex-col w-full transition-all hover:border-primary hover:shadow-lg hover:-translate-y-2">
                                 <CardHeader>
                                     <div className="flex items-center justify-between">
                                         <CardTitle>{project.title}</CardTitle>

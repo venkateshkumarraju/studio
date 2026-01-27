@@ -64,7 +64,7 @@ export function ExperienceSection() {
                                         <SphereAnimation width={56} height={56} dotsAmount={200} dotRadius={0.6} sphereRadius={25} turnSpeed={0.01} />
                                     </div>
                                 </div>
-                                <Card className={`bg-background/30 backdrop-blur-sm border-border/30 ${index % 2 === 0 ? '' : 'md:ml-auto'}`}>
+                                <Card className={`bg-background/30 backdrop-blur-sm border-border/30 transition-all hover:shadow-lg hover:-translate-y-1 ${index % 2 === 0 ? '' : 'md:ml-auto'}`}>
                                     <CardHeader>
                                        <div className="flex items-center justify-between">
                                             <CardTitle>{exp.title}</CardTitle>
