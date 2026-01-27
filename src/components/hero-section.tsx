@@ -27,9 +27,6 @@ export function HeroSection() {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <a href="https://drive.google.com/file/d/1oWn_64W76GiRneAXl4QUQrU4vsmV6FAb/view?usp=drive_link" download className="learn-more">
-                  View Resume <ArrowDown className="ml-2 h-4 w-4" />
-              </a>
               <Link href="#contact" className="learn-more">
                 Hire me
               </Link>
