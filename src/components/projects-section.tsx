@@ -56,7 +56,7 @@ export function ProjectsSection() {
                     {projects.map((project) => (
                         <Link key={project.title} href={project.link} target="_blank" rel="noopener noreferrer" className="flex">
                             <TiltCard>
-                                <Card className="flex flex-col w-full h-full transition-all hover:border-primary">
+                                <Card className="flex flex-col w-full h-full bg-background/30 backdrop-blur-sm border-border/30 transition-all hover:border-primary">
                                     <CardHeader>
                                         <div className="flex items-center justify-between">
                                             <CardTitle>{project.title}</CardTitle>

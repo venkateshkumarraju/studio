@@ -1,3 +1,4 @@
+'use client';
 import { ScanSearch, Spline, Mountain, Map, Navigation, Scan, AppWindow } from "lucide-react";
 import React from 'react';
 import { TiltCard } from "./tilt-card";
@@ -59,7 +60,7 @@ export function ServicesSection() {
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     {services.map((service) => (
                         <TiltCard key={service.title}>
-                            <Card className="flex flex-col w-full h-full transition-all hover:border-primary">
+                            <Card className="flex flex-col w-full h-full bg-background/30 backdrop-blur-sm border-border/30 transition-all hover:border-primary">
                                 <CardHeader>
                                     <div className="flex items-start gap-4">
                                         {React.cloneElement(service.icon, { className: "h-8 w-8 text-primary shrink-0"})}

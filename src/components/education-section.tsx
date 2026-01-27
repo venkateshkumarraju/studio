@@ -15,7 +15,7 @@ export function EducationSection() {
                 </div>
                 <div className="grid gap-8 md:grid-cols-2">
                     <TiltCard>
-                        <Card className="w-full h-full transition-all hover:border-primary">
+                        <Card className="flex flex-col w-full h-full bg-background/30 backdrop-blur-sm border-border/30 transition-all hover:border-primary">
                             <CardHeader>
                                 <div className="flex items-center gap-4">
                                     <GraduationCap className="h-8 w-8 text-primary"/>
@@ -28,7 +28,7 @@ export function EducationSection() {
                         </Card>
                     </TiltCard>
                     <TiltCard>
-                        <Card className="w-full h-full transition-all hover:border-primary">
+                        <Card className="flex flex-col w-full h-full bg-background/30 backdrop-blur-sm border-border/30 transition-all hover:border-primary">
                             <CardHeader>
                                <div className="flex items-center gap-4">
                                     <GraduationCap className="h-8 w-8 text-primary"/>
