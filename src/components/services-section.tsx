@@ -1,41 +1,42 @@
-import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { ScanSearch, Spline, Mountain, Map, Navigation, Scan, AppWindow } from "lucide-react";
+import React from 'react';
+
 
 const services = [
     {
         title: "Object Detection Model",
         description: "Building custom models to detect and classify objects in images and videos.",
-        icon: <ScanSearch className="h-10 w-10 text-primary" />
+        icon: <ScanSearch />
     },
     {
         title: "Image Segmentation Model",
         description: "Developing models for pixel-level classification and precise object masking.",
-        icon: <Spline className="h-10 w-10 text-primary" />
+        icon: <Spline />
     },
     {
         title: "Topographic Mapping",
         description: "Creating detailed maps representing the Earth's surface with elevation and features.",
-        icon: <Mountain className="h-10 w-10 text-primary" />
+        icon: <Mountain />
     },
     {
         title: "Planimetric Mapping",
         description: "Producing maps that show the horizontal positions of features without elevation.",
-        icon: <Map className="h-10 w-10 text-primary" />
+        icon: <Map />
     },
     {
         title: "Drone Operations",
         description: "Certified and experienced in conducting aerial surveys and data acquisition with drones.",
-        icon: <Navigation className="h-10 w-10 text-primary" />
+        icon: <Navigation />
     },
     {
         title: "Drone Image Processing",
         description: "Processing aerial imagery to create orthomosaics, 3D models, and more.",
-        icon: <Scan className="h-10 w-10 text-primary" />
+        icon: <Scan />
     },
     {
         title: "Web App Development",
         description: "Developing custom web applications to visualize and interact with geospatial data.",
-        icon: <AppWindow className="h-10 w-10 text-primary" />
+        icon: <AppWindow />
     }
 ];
 
@@ -53,13 +54,26 @@ export function ServicesSection() {
                         Offering a range of specialized services in geospatial and AI domains.
                     </p>
                 </div>
-                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
                     {services.map((service) => (
-                        <Card key={service.title} className="flex flex-col items-center text-center p-6 transition-all hover:shadow-lg hover:-translate-y-2">
-                            <div className="mb-4">{service.icon}</div>
-                            <CardTitle className="mb-2 text-xl">{service.title}</CardTitle>
-                            <CardDescription>{service.description}</CardDescription>
-                        </Card>
+                        <div key={service.title} className="service-parent">
+                            <div className="service-card">
+                                <div className="logo">
+                                    <span className="circle circle1"></span>
+                                    <span className="circle circle2"></span>
+                                    <span className="circle circle3"></span>
+                                    <span className="circle circle4"></span>
+                                    <span className="circle circle5">
+                                        {React.cloneElement(service.icon, { className: 'service-icon' })}
+                                    </span>
+                                </div>
+                                <div className="glass"></div>
+                                <div className="content">
+                                    <span className="title">{service.title}</span>
+                                    <span className="text">{service.description}</span>
+                                </div>
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>
