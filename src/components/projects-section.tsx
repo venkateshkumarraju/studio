@@ -1,7 +1,9 @@
+'use client';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { Github, ExternalLink } from "lucide-react";
+import { TiltCard } from "./tilt-card";
 
 const projects = [
     {
@@ -53,26 +55,28 @@ export function ProjectsSection() {
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project) => (
                         <Link key={project.title} href={project.link} target="_blank" rel="noopener noreferrer" className="flex">
-                            <Card className="flex flex-col w-full transition-all hover:border-primary hover:shadow-lg hover:-translate-y-2">
-                                <CardHeader>
-                                    <div className="flex items-center justify-between">
-                                        <CardTitle>{project.title}</CardTitle>
-                                        {project.link.startsWith("https://github.com") ? (
-                                            <Github className="h-5 w-5 text-muted-foreground" />
-                                        ) : (
-                                            <ExternalLink className="h-5 w-5 text-muted-foreground" />
-                                        )}
-                                    </div>
-                                    <CardDescription>{project.description}</CardDescription>
-                                </CardHeader>
-                                <CardContent className="flex-grow mt-auto">
-                                    <div className="flex flex-wrap gap-2">
-                                        {project.tags.map((tag) => (
-                                            <Badge key={tag} variant="secondary">{tag}</Badge>
-                                        ))}
-                                    </div>
-                                </CardContent>
-                            </Card>
+                            <TiltCard>
+                                <Card className="flex flex-col w-full h-full transition-all hover:border-primary">
+                                    <CardHeader>
+                                        <div className="flex items-center justify-between">
+                                            <CardTitle>{project.title}</CardTitle>
+                                            {project.link.startsWith("https://github.com") ? (
+                                                <Github className="h-5 w-5 text-muted-foreground" />
+                                            ) : (
+                                                <ExternalLink className="h-5 w-5 text-muted-foreground" />
+                                            )}
+                                        </div>
+                                        <CardDescription>{project.description}</CardDescription>
+                                    </CardHeader>
+                                    <CardContent className="flex-grow mt-auto">
+                                        <div className="flex flex-wrap gap-2">
+                                            {project.tags.map((tag) => (
+                                                <Badge key={tag} variant="secondary">{tag}</Badge>
+                                            ))}
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </TiltCard>
                         </Link>
                     ))}
                 </div>
