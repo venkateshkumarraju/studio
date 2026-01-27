@@ -154,3 +154,38 @@ html {
 @keyframes spin {
   to { transform: rotate(1turn); }
 }
+
+/* 3D Social Icons */
+.child {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.child:hover {
+  background-color: hsla(var(--card) / 0.5);
+  transform: perspective(180px) rotateX(60deg) translateY(2px);
+  box-shadow: 0px 10px 10px hsl(var(--primary) / 0.2);
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+.child:hover .button {
+  transform: translate3d(0px, 0px, 15px);
+}

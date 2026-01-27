@@ -25,9 +25,17 @@ export function ContactSection() {
                     <MapPin className="h-5 w-5 text-foreground" />
                     <span>Chennai, India</span>
                 </div>
-                <div className="flex gap-4 pt-4">
-                    <Link href="https://www.linkedin.com/in/venkatesh-kumar-raju/" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-foreground"><Linkedin className="h-6 w-6" /></Link>
-                    <Link href="https://github.com/VenkateshKumarRaju" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-foreground"><Github className="h-6 w-6" /></Link>
+                <div className="flex pt-4 -ml-2.5">
+                  <div className="child">
+                    <Link href="https://www.linkedin.com/in/venkatesh-kumar-raju/" target="_blank" rel="noopener noreferrer" className="button">
+                      <Linkedin className="h-6 w-6 text-foreground" />
+                    </Link>
+                  </div>
+                  <div className="child">
+                    <Link href="https://github.com/VenkateshKumarRaju" target="_blank" rel="noopener noreferrer" className="button">
+                      <Github className="h-6 w-6 text-foreground" />
+                    </Link>
+                  </div>
                 </div>
             </div>
           </div>
