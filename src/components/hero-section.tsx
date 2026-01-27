@@ -28,7 +28,7 @@ export function HeroSection() {
 
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button asChild size="lg" variant="secondary">
-                <a href="/resume.pdf" download>
+                <a href="https://github.com/venkateshkumarraju/venkateshkumarraju/blob/main/assets/venkatesh_kumar_raju.pdf" download>
                   View Resume <ArrowDown className="ml-2 h-4 w-4" />
                 </a>
               </Button>
