@@ -200,10 +200,10 @@ html {
 .service-card {
   height: 100%;
   border-radius: 50px;
-  background: linear-gradient(135deg, #b490ca 0%, #5ee7df 100%);
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.7) 0%, hsl(var(--accent) / 0.7) 100%);
   transition: all 0.5s ease-in-out;
   transform-style: preserve-3d;
-  box-shadow: rgba(90, 60, 112, 0) 40px 50px 25px -40px, rgba(90, 60, 112, 0.2) 0px 25px 25px -5px;
+  box-shadow: rgba(90, 60, 112, 0) 40px 50px 25px -40px, hsla(var(--primary) / 0.2) 0px 25px 25px -5px;
 }
 
 .service-card .glass {
@@ -227,14 +227,14 @@ html {
 
 .service-card .content .title {
   display: block;
-  color: #3d315b;
+  color: hsl(var(--card-foreground));
   font-weight: 900;
   font-size: 20px;
 }
 
 .service-card .content .text {
   display: block;
-  color: rgba(61, 49, 91, 0.75);
+  color: hsl(var(--card-foreground) / 0.75);
   font-size: 15px;
   margin-top: 20px;
 }
@@ -256,7 +256,7 @@ html {
   box-shadow: rgba(100, 100, 111, 0.2) -10px 10px 20px 0px;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  background: rgba(180, 144, 202, 0.2);
+  background: hsla(var(--primary) / 0.2);
   transition: all 0.5s ease-in-out;
 }
 
@@ -311,7 +311,7 @@ html {
 
 .service-parent:hover .service-card {
   transform: rotate3d(1, 1, 0, 30deg);
-  box-shadow: rgba(90, 60, 112, 0.3) 30px 50px 25px -40px, rgba(90, 60, 112, 0.1) 0px 25px 30px 0px;
+  box-shadow: hsla(var(--primary) / 0.3) 30px 50px 25px -40px, hsla(var(--primary) / 0.1) 0px 25px 30px 0px;
 }
 
 .service-parent:hover .service-card .logo .circle2 {
@@ -340,10 +340,10 @@ html {
 .skill-card {
   height: 100%;
   border-radius: 50px;
-  background: linear-gradient(135deg, #faaca8 0%, #ddd6f3 100%);
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.7) 0%, hsl(var(--accent) / 0.7) 100%);
   transition: all 0.5s ease-in-out;
   transform-style: preserve-3d;
-  box-shadow: rgba(221, 214, 243, 0) 40px 50px 25px -40px, rgba(250, 172, 168, 0.2) 0px 25px 25px -5px;
+  box-shadow: rgba(221, 214, 243, 0) 40px 50px 25px -40px, hsla(var(--primary) / 0.2) 0px 25px 25px -5px;
 }
 
 .skill-card .glass {
@@ -367,14 +367,14 @@ html {
 
 .skill-card .content .title {
   display: block;
-  color: #5D4157;
+  color: hsl(var(--card-foreground));
   font-weight: 900;
   font-size: 20px;
 }
 
 .skill-card .content .text {
   display: block;
-  color: rgba(93, 65, 87, 0.75);
+  color: hsl(var(--card-foreground) / 0.75);
   font-size: 15px;
   margin-top: 20px;
 }
@@ -396,7 +396,7 @@ html {
   box-shadow: rgba(100, 100, 111, 0.2) -10px 10px 20px 0px;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  background: rgba(221, 214, 243, 0.2);
+  background: hsla(var(--primary) / 0.2);
   transition: all 0.5s ease-in-out;
 }
 
@@ -451,7 +451,7 @@ html {
 
 .skill-parent:hover .skill-card {
   transform: rotate3d(1, 1, 0, 30deg);
-  box-shadow: rgba(250, 172, 168, 0.3) 30px 50px 25px -40px, rgba(221, 214, 243, 0.1) 0px 25px 30px 0px;
+  box-shadow: hsla(var(--primary) / 0.3) 30px 50px 25px -40px, hsla(var(--primary) / 0.1) 0px 25px 30px 0px;
 }
 
 .skill-parent:hover .skill-card .logo .circle2 {
@@ -474,7 +474,8 @@ html {
 /* From Uiverse.io by gharsh11032000 */
 .learn-more {
   position: relative;
-  width: 120px;
+  width: auto;
+  padding: 0 24px;
   height: 40px;
   background-color: hsl(var(--primary));
   display: flex;
@@ -493,14 +494,9 @@ html {
 .learn-more::before {
   content: '';
   position: absolute;
-  inset: 0;
-  left: -4px;
-  top: -1px;
-  margin: auto;
-  width: 128px;
-  height: 48px;
-  border-radius: 10px;
-  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  inset: -4px;
+  border-radius: 12px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
   z-index: -10;
   pointer-events: none;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
