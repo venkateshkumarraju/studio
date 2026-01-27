@@ -47,11 +47,8 @@ export function Header() {
           </Link>
         </nav>
         <div className="flex items-center gap-4">
-            <Link href="#contact" className="hidden md:inline-flex">
-                <Button>
-                    Hire me
-                    <ArrowUpRight className="ml-2 h-4 w-4" />
-                </Button>
+            <Link href="#contact" className="learn-more hidden md:inline-block">
+                Hire me
             </Link>
             <Sheet>
                 <SheetTrigger asChild>
@@ -92,10 +89,8 @@ export function Header() {
                     >
                         Projects
                     </Link>
-                    <Link href="#contact">
-                        <Button className="w-full">
-                            Hire me
-                        </Button>
+                    <Link href="#contact" className="learn-more text-center">
+                        Hire me
                     </Link>
                     </div>
                 </SheetContent>

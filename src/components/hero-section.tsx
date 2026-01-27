@@ -32,11 +32,9 @@ export function HeroSection() {
                   View Resume <ArrowDown className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-foreground/20 text-foreground hover:bg-foreground/5">
-                <Link href="#contact">
-                  Hire me <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+              <Link href="#contact" className="learn-more">
+                Hire me
+              </Link>
             </div>
           </div>
 
