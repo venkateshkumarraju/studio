@@ -27,9 +27,7 @@ export function HeroSection() {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="#contact" className="learn-more">
-                Hire me
-              </Link>
+              
             </div>
           </div>
 

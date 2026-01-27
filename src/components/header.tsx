@@ -45,11 +45,14 @@ export function Header() {
           >
             Projects
           </Link>
+          <Link
+            href="#contact"
+            className="font-medium text-foreground/70 transition-colors hover:text-foreground"
+          >
+            Contact
+          </Link>
         </nav>
         <div className="flex items-center gap-4">
-            <Link href="#contact" className="learn-more hidden md:inline-block">
-                Hire me
-            </Link>
             <Sheet>
                 <SheetTrigger asChild>
                     <Button variant="outline" size="icon" className="md:hidden">
@@ -89,8 +92,11 @@ export function Header() {
                     >
                         Projects
                     </Link>
-                    <Link href="#contact" className="learn-more text-center">
-                        Hire me
+                    <Link
+                        href="#contact"
+                        className="font-medium text-foreground/70 transition-colors hover:text-foreground"
+                    >
+                        Contact
                     </Link>
                     </div>
                 </SheetContent>
