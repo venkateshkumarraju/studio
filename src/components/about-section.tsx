@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { SphereAnimation } from "@/components/sphere-animation";
+import placeholderImages from "@/app/lib/placeholder-images.json";
 
 export function AboutSection() {
     return (
@@ -8,15 +10,16 @@ export function AboutSection() {
             style={{backgroundImage: 'linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)'}}
         >
             <div className="container mx-auto grid max-w-7xl items-center gap-10 px-4 md:grid-cols-2 md:px-6">
-                <div className="relative h-[400px] w-full md:h-[500px]">
+                <div className="relative flex h-[400px] w-full items-center justify-center md:h-[500px]">
                      <Image
-                        src="https://raw.githubusercontent.com/venkateshkumarraju/venkateshkumarraju/main/assets/IMG_20250309_210635.png"
-                        alt="Venkatesh Kumar Raju working"
-                        layout="fill"
-                        objectFit="cover"
-                        className="rounded-lg"
-                        data-ai-hint="man working laptop"
+                        src={placeholderImages.profileSphere.src}
+                        width={placeholderImages.profileSphere.width}
+                        height={placeholderImages.profileSphere.height}
+                        alt={placeholderImages.profileSphere.alt}
+                        data-ai-hint={placeholderImages.profileSphere.hint}
+                        className="absolute rounded-full"
                     />
+                    <SphereAnimation />
                 </div>
                 <div className="space-y-4">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">About Me</h2>
