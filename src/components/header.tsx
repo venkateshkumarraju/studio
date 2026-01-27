@@ -22,6 +22,12 @@ export function Header() {
             About
           </Link>
           <Link
+            href="#services"
+            className="font-medium text-foreground/70 transition-colors hover:text-foreground"
+          >
+            Services
+          </Link>
+          <Link
             href="#experience"
             className="font-medium text-foreground/70 transition-colors hover:text-foreground"
           >
@@ -61,6 +67,12 @@ export function Header() {
                         className="font-medium text-foreground/70 transition-colors hover:text-foreground"
                     >
                         About
+                    </Link>
+                    <Link
+                        href="#services"
+                        className="font-medium text-foreground/70 transition-colors hover:text-foreground"
+                    >
+                        Services
                     </Link>
                     <Link
                         href="#experience"

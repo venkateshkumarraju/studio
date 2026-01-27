@@ -6,6 +6,7 @@ import { SkillsSection } from "@/components/marquee-section";
 import { ProjectsSection } from "@/components/projects-section";
 import { EducationSection } from "@/components/education-section";
 import { ContactSection } from "@/components/contact-footer";
+import { ServicesSection } from "@/components/services-section";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <main className="flex flex-1 flex-col">
         <HeroSection />
         <AboutSection />
+        <ServicesSection />
         <ExperienceSection />
         <SkillsSection />
         <ProjectsSection />
