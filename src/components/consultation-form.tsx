@@ -126,7 +126,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="cursor-pointer relative bg-secondary py-2 rounded-full min-w-[8.5rem] min-h-[2.92rem] group w-full flex items-center justify-start hover:bg-primary transition-all duration-[0.8s] ease-[cubic-bezier(0.510,0.026,0.368,1.016)] shadow-[inset_1px_2px_5px_#00000080] disabled:opacity-50 disabled:cursor-not-allowed"
+      className="cursor-pointer relative bg-secondary py-2 rounded-full min-w-[8.5rem] min-h-[2.92rem] group w-full flex items-center justify-start hover:bg-primary transition-all duration-800 ease-custom-ease shadow-[inset_1px_2px_5px_#00000080] disabled:opacity-50 disabled:cursor-not-allowed"
     >
       {pending ? (
         <div className="flex items-center justify-center w-full">
@@ -137,13 +137,13 @@ function SubmitButton() {
         <>
           <div className="absolute flex px-1 py-0.5 justify-start items-center inset-0">
             <div
-              className="w-[0%] group-hover:w-full transition-all duration-[1s] ease-[cubic-bezier(0.510,0.026,0.368,1.016)]"
+              className="w-[0%] group-hover:w-full transition-all duration-1000 ease-custom-ease"
             ></div>
             <div
-              className="rounded-full shrink-0 flex justify-center items-center shadow-[inset_1px_-1px_3px_0_black] h-full aspect-square bg-primary transition-all duration-[1s] ease-[cubic-bezier(0.510,0.026,0.368,1.016)] group-hover:bg-foreground"
+              className="rounded-full shrink-0 flex justify-center items-center shadow-[inset_1px_-1px_3px_0_black] h-full aspect-square bg-primary transition-all duration-1000 ease-custom-ease group-hover:bg-foreground"
             >
               <div
-                className="size-[0.8rem] text-primary-foreground group-hover:text-background group-hover:-rotate-45 transition-all duration-[1s] ease-[cubic-bezier(0.510,0.026,0.368,1.016)]"
+                className="size-[0.8rem] text-primary-foreground group-hover:text-background group-hover:-rotate-45 transition-all duration-1000 ease-custom-ease"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +161,7 @@ function SubmitButton() {
             </div>
           </div>
           <div
-            className="w-full text-center pl-[3.4rem] pr-[1.1rem] group-hover:pl-[1.1rem] group-hover:pr-[3.4rem] transition-all duration-[1s] ease-[cubic-bezier(0.510,0.026,0.368,1.016)] group-hover:text-primary-foreground text-foreground"
+            className="w-full text-center pl-[3.4rem] pr-[1.1rem] group-hover:pl-[1.1rem] group-hover:pr-[3.4rem] transition-all duration-1000 ease-custom-ease group-hover:text-primary-foreground text-foreground"
           >
             Send Message
           </div>

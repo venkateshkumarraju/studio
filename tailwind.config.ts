@@ -94,6 +94,9 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'marquee': 'scroll 40s linear infinite',
       },
+      transitionTimingFunction: {
+        'custom-ease': 'cubic-bezier(0.510, 0.026, 0.368, 1.016)',
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],
