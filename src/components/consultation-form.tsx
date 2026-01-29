@@ -64,7 +64,7 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-6 rounded-lg border bg-card p-6 md:p-8"
+        className="space-y-6"
       >
         <FormField
           control={form.control}
@@ -120,7 +120,7 @@ function SubmitButton({ isSubmitting }: { isSubmitting: boolean }) {
     <button
       type="submit"
       disabled={isSubmitting}
-      className="cursor-pointer relative bg-secondary py-2 rounded-full min-w-[8.5rem] min-h-[2.92rem] group w-full flex items-center justify-start hover:bg-primary transition-all duration-800 ease-custom-ease shadow-[inset_1px_2px_5px_#00000080] disabled:opacity-50 disabled:cursor-not-allowed"
+      className="cursor-pointer relative bg-secondary py-2 rounded-full min-w-[8.5rem] min-h-[2.92rem] group w-full flex items-center justify-start hover:bg-primary transition-all duration-1000 ease-custom-ease shadow-[inset_1px_2px_5px_#00000080] disabled:opacity-50 disabled:cursor-not-allowed"
     >
       {isSubmitting ? (
         <div className="flex items-center justify-center w-full">
