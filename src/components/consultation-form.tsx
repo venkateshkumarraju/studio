@@ -1,12 +1,10 @@
 "use client";
 
-import { useFormStatus } from "react-dom";
+import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { useEffect, useActionState } from "react";
 
-import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -18,7 +16,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { submitContactForm } from "@/app/actions";
 import { Loader2 } from "lucide-react";
 
 const formSchema = z.object({
@@ -35,10 +32,7 @@ const formSchema = z.object({
 
 export function ContactForm() {
   const { toast } = useToast();
-  const [state, formAction] = useActionState(submitContactForm, {
-    success: false,
-    message: "",
-  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -49,27 +43,29 @@ export function ContactForm() {
     },
   });
 
-  useEffect(() => {
-    if (state.message) {
-      if (state.success) {
-        toast({
-          title: "Success!",
-          description: state.message,
-        });
-        form.reset();
-      } else {
-        toast({
-          title: "Error",
-          description: state.message,
-          variant: "destructive",
-        });
-      }
-    }
-  }, [state, toast, form]);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    // In a static site, we can't run server actions.
+    // We'll simulate a delay and show a message.
+    console.log("Form submitted:", values);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    toast({
+      title: "Message Sent (Simulated)",
+      description:
+        "Because this is a static website, form submission isn't active.",
+    });
+
+    form.reset();
+    setIsSubmitting(false);
+  }
 
   return (
     <Form {...form}>
-      <form action={formAction} className="space-y-6 rounded-lg border bg-card p-6 md:p-8">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-6 rounded-lg border bg-card p-6 md:p-8"
+      >
         <FormField
           control={form.control}
           name="name"
@@ -113,22 +109,20 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <SubmitButton />
+        <SubmitButton isSubmitting={isSubmitting} />
       </form>
     </Form>
   );
 }
 
-function SubmitButton() {
-  const { pending } = useFormStatus();
-
+function SubmitButton({ isSubmitting }: { isSubmitting: boolean }) {
   return (
     <button
       type="submit"
-      disabled={pending}
+      disabled={isSubmitting}
       className="cursor-pointer relative bg-secondary py-2 rounded-full min-w-[8.5rem] min-h-[2.92rem] group w-full flex items-center justify-start hover:bg-primary transition-all duration-800 ease-custom-ease shadow-[inset_1px_2px_5px_#00000080] disabled:opacity-50 disabled:cursor-not-allowed"
     >
-      {pending ? (
+      {isSubmitting ? (
         <div className="flex items-center justify-center w-full">
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
           Sending...
