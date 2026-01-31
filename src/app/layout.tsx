@@ -6,19 +6,22 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
 
+const title = "Venkatesh Kumar Raju | GIS, Machine Learning, and Computer Vision Expert";
+const description = "Explore the portfolio of Venkatesh Kumar Raju, a skilled GIS Engineer, certified Remote Pilot, and Machine Learning specialist with expertise in computer vision, deep learning, and geospatial analysis.";
+const imageUrl = "https://raw.githubusercontent.com/venkateshkumarraju/venkateshkumarraju/main/assets/pic%20profile.png";
+
 export const metadata: Metadata = {
-  title: "Venkatesh Kumar Raju | GIS, Machine Learning, and Computer Vision Expert",
-  description: "Explore the portfolio of Venkatesh Kumar Raju, a skilled GIS Engineer, certified Remote Pilot, and Machine Learning specialist with expertise in computer vision, deep learning, and geospatial analysis.",
+  title: title,
+  description: description,
   keywords: "GIS, Machine Learning, Computer Vision, Remote Sensing, Drone Pilot, Geospatial, Deep Learning, PyTorch, TensorFlow, Python, Portfolio, Venkatesh Kumar Raju",
   authors: [{ name: "Venkatesh Kumar Raju" }],
   openGraph: {
-    title: "Venkatesh Kumar Raju | GIS, Machine Learning, and Computer Vision Expert",
-    description: "Explore the portfolio of Venkatesh Kumar Raju, a skilled GIS Engineer and Machine Learning specialist.",
-    url: "https://raw.githubusercontent.com/venkateshkumarraju/venkateshkumarraju/main/assets/pic%20profile.png",
+    title: title,
+    description: description,
     siteName: "Venkatesh Kumar Raju Portfolio",
     images: [
       {
-        url: "https://raw.githubusercontent.com/venkateshkumarraju/venkateshkumarraju/main/assets/pic%20profile.png",
+        url: imageUrl,
         width: 300,
         height: 300,
         alt: "Venkatesh Kumar Raju Profile Picture"
@@ -26,6 +29,12 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: title,
+    description: description,
+    images: [imageUrl],
   },
 };
 
