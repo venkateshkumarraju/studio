@@ -46,6 +46,12 @@ export function Header() {
             Projects
           </Link>
           <Link
+            href="#education"
+            className="font-medium text-foreground/70 transition-colors hover:text-foreground"
+          >
+            Education
+          </Link>
+          <Link
             href="#contact"
             className="font-medium text-foreground/70 transition-colors hover:text-foreground"
           >
@@ -91,6 +97,12 @@ export function Header() {
                         className="font-medium text-foreground/70 transition-colors hover:text-foreground"
                     >
                         Projects
+                    </Link>
+                    <Link
+                        href="#education"
+                        className="font-medium text-foreground/70 transition-colors hover:text-foreground"
+                    >
+                        Education
                     </Link>
                     <Link
                         href="#contact"
