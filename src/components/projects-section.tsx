@@ -16,7 +16,7 @@ const projects = [
         title: "Image Stitching",
         description: "Stitch drone images into panoramic orthomosaics.",
         tags: ["Drone Imagery", "Orthomosaic", "Image Processing"],
-        link: "https://github.com/VenkateshKumarRaju/image-stitching"
+        link: "https://github.com/venkateshkumarraju/image-stitching-"
     },
     {
         title: "JPG to GeoTIFF Converter",
@@ -34,7 +34,7 @@ const projects = [
         title: "Object Detection (YOLOv5)",
         description: "Includes ANPR (Automatic Number Plate Recognition) functionality.",
         tags: ["YOLOv5", "Object Detection", "ANPR"],
-        link: "https://github.com/VenkateshKumarRaju/object-detection"
+        link: "https://github.com/venkateshkumarraju/object-dectection-"
     },
 ];
 
