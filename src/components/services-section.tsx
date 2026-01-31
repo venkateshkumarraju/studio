@@ -52,7 +52,7 @@ export function ServicesSection() {
         >
             <div className="container mx-auto max-w-7xl space-y-12 px-4 md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Services</h2>
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Expertise</h2>
                     <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                         Offering a range of specialized services in geospatial and AI domains.
                     </p>
