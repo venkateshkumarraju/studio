@@ -54,7 +54,7 @@ export function ServicesSection() {
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Expertise</h2>
                     <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        My expertise spans a range of specialized services in the geospatial and AI domains.
+                        Specialized expertise in geospatial and AI domains.
                     </p>
                 </div>
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
